@@ -1,0 +1,30 @@
+version: '2'
+services:
+#  nginx_data:
+#    image: tumbumer/nginx:latest
+#    build: .
+#    container_name: nginx_data
+#    volumes:
+#    - conf.d:/etc/nginx/conf.d
+#    - html:/usr/share/nginx/html
+#    command: echo This is data container
+  nginx:
+    image: tumbumer/nginx:latest
+    build: .
+    container_name: nginx
+#    volumes_from:
+#    - nginx_data
+    volumes:
+    - /home/denis/oth/docker/nginx/conf:/data/conf
+    - /home/denis/oth/docker/nginx/html:/data/html
+    networks:
+    - docker
+    hostname: nginx
+    ports:
+    - "172.16.15.2:80:80"
+networks:
+  docker:
+    external: true
+#volumes:
+#  conf.d: {}
+#  html: {}

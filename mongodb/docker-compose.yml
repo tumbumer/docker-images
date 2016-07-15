@@ -1,0 +1,15 @@
+version: '2'
+services:
+  mongodb:
+    image: mongo:3.2
+    container_name: mongo
+    volumes:
+    - /home/denis/oth/docker/mongo:/data/db
+    networks:
+    - docker
+    hostname: mongo
+    ports:
+    - "127.0.0.1:27017:27017"
+networks:
+  docker:
+    external: true
