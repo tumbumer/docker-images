@@ -5,7 +5,3 @@ Thumbs.db
 # Editors and IDE
 .idea
 .vscode
-
-# Project
-1c-enterprise-desktop/dist/*
-!1c-enterprise-desktop/dist/.gitkeep
