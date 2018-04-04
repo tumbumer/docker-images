@@ -5,7 +5,7 @@ Periodically backup [PostgreSQL](https://www.postgresql.org) database on a S3 co
 ## Install
 
 ```bash
-docker pull tumbumer/postgres-backup-s3
+docker pull tumbumer/postgres-backup-restic
 ```
 
 ## Required vars
@@ -22,7 +22,7 @@ docker pull tumbumer/postgres-backup-s3
 ### Create container
 
 ```bash
-docker create --name pgbackup -e CRONTAB_LINE="0 0 * * *" tumbumer/postgres-backup-s3
+docker create --name pgbackup -e CRONTAB_LINE="0 0 * * *" tumbumer/postgres-backup-restic
 ```
 
 ### Start container
@@ -32,4 +32,3 @@ docker start pgbackup
 ```
 
 ### Compose file example
-

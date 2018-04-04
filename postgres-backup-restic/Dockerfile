@@ -8,4 +8,4 @@ RUN \
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-CMD ["crond", "-f"]
+CMD ["crond", "-f", "-d", "8"]
