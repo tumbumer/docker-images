@@ -25,8 +25,8 @@ services:
     image: tumbumer/dante:latest
     container_name: dante
     network_mode: host
-  environment:
-    - INTERNAL=127.0.0.1
-    - PORT=1080
-    - EXTERNAL=enp2s0
+    environment:
+      - INTERNAL=127.0.0.1
+      - PORT=1080
+      - EXTERNAL=enp2s0
 ```
